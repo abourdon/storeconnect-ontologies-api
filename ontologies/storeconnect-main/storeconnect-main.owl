@@ -148,6 +148,9 @@
         <NamedIndividual IRI="Walking"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="totalAmount"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="MotionThing"/>
     </Declaration>
     <Declaration>
@@ -190,10 +193,13 @@
         <Class IRI="CELThing"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BleTracker"/>
+        <Class IRI="CaisseThing"/>
     </Declaration>
     <Declaration>
         <Class IRI="Orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BleTracker"/>
     </Declaration>
     <Declaration>
         <Class IRI="Motion"/>
@@ -214,6 +220,9 @@
         <ObjectProperty IRI="hasInstant"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Ticket"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="SpatialThing"/>
     </Declaration>
     <Declaration>
@@ -230,6 +239,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CaisseEnregistreuse"/>
     </Declaration>
     <Declaration>
         <Class IRI="Speed"/>
@@ -319,6 +331,26 @@
     <SubClassOf>
         <Class IRI="CELThing"/>
         <Class IRI="SubjectThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CaisseEnregistreuse"/>
+        <Class IRI="CaisseThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CaisseEnregistreuse"/>
+        <Class IRI="SensorThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CaisseEnregistreuse"/>
+        <Class abbreviatedIRI="sosa:Platform"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CaisseEnregistreuse"/>
+        <Class abbreviatedIRI="sosa:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CaisseThing"/>
+        <Class IRI="BusinessThing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Camera"/>
@@ -616,6 +648,14 @@
         <Class IRI="StoreConnectThing"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Ticket"/>
+        <Class IRI="CaisseThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ticket"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="VideoTracker"/>
         <Class IRI="SensorThing"/>
     </SubClassOf>
@@ -831,6 +871,10 @@
         <DataProperty IRI="speed"/>
         <DataProperty IRI="storeConnectDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="totalAmount"/>
+        <DataProperty IRI="storeConnectDataProperty"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="accuracy"/>
         <Class IRI="Accurate"/>
@@ -850,6 +894,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="speed"/>
         <Class IRI="Speed"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="totalAmount"/>
+        <Class IRI="Ticket"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="accuracy"/>
@@ -874,6 +922,10 @@
     <DataPropertyRange>
         <DataProperty IRI="speed"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="totalAmount"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>

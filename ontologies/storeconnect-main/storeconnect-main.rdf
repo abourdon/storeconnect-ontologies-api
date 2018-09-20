@@ -309,6 +309,16 @@
     
 
 
+    <!-- http://storeconnect/totalAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://storeconnect/totalAmount">
+        <rdfs:subPropertyOf rdf:resource="http://storeconnect/storeConnectDataProperty"/>
+        <rdfs:domain rdf:resource="http://storeconnect/Ticket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -404,6 +414,25 @@
     <owl:Class rdf:about="http://storeconnect/CELThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/SubjectThing"/>
         <terms:description xml:lang="en">A owl:Thing related to the CEL notion.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/CaisseEnregistreuse -->
+
+    <owl:Class rdf:about="http://storeconnect/CaisseEnregistreuse">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/CaisseThing"/>
+        <rdfs:subClassOf rdf:resource="http://storeconnect/SensorThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/CaisseThing -->
+
+    <owl:Class rdf:about="http://storeconnect/CaisseThing">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/BusinessThing"/>
     </owl:Class>
     
 
@@ -808,6 +837,15 @@
     <owl:Class rdf:about="http://storeconnect/TechnicalThing">
         <rdfs:subClassOf rdf:resource="http://storeconnect/StoreConnectThing"/>
         <terms:description xml:lang="en">A owl:Thing related to the technical part of the StoreConnect project.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://storeconnect/Ticket -->
+
+    <owl:Class rdf:about="http://storeconnect/Ticket">
+        <rdfs:subClassOf rdf:resource="http://storeconnect/CaisseThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
     </owl:Class>
     
 
